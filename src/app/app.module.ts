@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { DishService } from './services/dish.service';
+import { PromotionService } from './services/promotion.service';
 
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
@@ -38,7 +39,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     FlexLayoutModule,
     AppRoutingModule
   ],
-  providers: [DishService],
+  providers: [DishService, PromotionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

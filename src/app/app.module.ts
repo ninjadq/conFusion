@@ -5,6 +5,7 @@ import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout'
 
 import { AppComponent } from './app.component';
+import { DishService } from './services/dish.service';
 
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
@@ -23,7 +24,7 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component'
     MaterialModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [DishService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

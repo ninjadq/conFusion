@@ -5,6 +5,7 @@ import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout'
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DishService } from './services/dish.service';
@@ -41,14 +42,15 @@ import { LoginComponent } from './login/login.component';
     HttpModule,
     MaterialModule,
     FlexLayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
-  providers: [DishService,
+  providers: [
+    DishService,
     PromotionService,
-    LeaderService],
-  entryComponents: [
-    LoginComponent
+    LeaderService
   ],
+  entryComponents: [LoginComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

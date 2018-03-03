@@ -99,7 +99,8 @@ export class DishdetailComponent implements OnInit {
     this.comment = this.commentForm.value;
     this.comment.date = (new Date()).toISOString();
     this.dishcopy.comments.push(this.comment);
-    this.dishcopy.save();
+    this.dishcopy.save()
+      .subscribe(dish => this.dish = dish);
     this.commentForm.reset({
       author: '',
       rating: 5,

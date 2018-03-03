@@ -4,10 +4,9 @@
   fxLayout.xs="column"
   fxLayoutAlign.gt-md="space-around center"
   fxLayoutGap="10px" 
-  fxLayoutGap.xs="0"
-  *ngIf="dish">
+  fxLayoutGap.xs="0">
 
-  <div fxFlex="40">
+  <div fxFlex="40" *ngIf="dish" [@visibility]="visibility">
     <div fxFlex>
       <md-card>
         <md-card-header>
@@ -31,7 +30,7 @@
       </md-card>
     </div>
   </div>
-  <div fxFlex="40">
+  <div fxFlex="40" *ngIf="dish" [@visibility]="visibility">
     <div>
       <md-list>
         <md-list-item *ngFor="let c of dish.comments">
